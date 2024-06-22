@@ -28,4 +28,17 @@ public class CalculatorController {
             throw new DivisionByZeroException();
         }
     }
+    
+    @GetMapping("/subtract/{a}/{b}")
+    public CalculatorResult subtract(@PathVariable BigDecimal a, @PathVariable BigDecimal b) {
+    	
+    	return new CalculatorResult(CalculatorService.subtract(a, b));
+    }
+    
+    @GetMapping("/multiply/{a}/{b}")
+    public CalculatorResult multiply(@PathVariable BigDecimal a, @PathVariable BigDecimal b) {
+    	
+    	return new CalculatorResult(CalculatorService.multiply(a, b));
+    }
+    
 }
