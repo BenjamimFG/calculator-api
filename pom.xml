@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.benfreitas</groupId>
 	<artifactId>calculator-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>calculator-api</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
@@ -47,6 +47,21 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<!-- Build an executable JAR -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<!-- here we specify that we want to use the main method within the App class -->
+							<mainClass>com.benfreitas.calculator_api.CalculatorApiApplication</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

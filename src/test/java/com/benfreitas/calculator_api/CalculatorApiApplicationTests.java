@@ -19,6 +19,6 @@ class CalculatorApiApplicationTests {
 
 	@Test
 	void additionWithNegative() {
-		assertEquals(new BigDecimal(4), CalculatorService.add(new BigDecimal(7), new BigDecimal(-2)));
+		assertEquals(new BigDecimal(5), CalculatorService.add(new BigDecimal(7), new BigDecimal(-2)));
 	}
 }
