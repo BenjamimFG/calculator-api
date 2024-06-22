@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build_and_test:
     runs-on: ubuntu-latest
     steps:
     - name: Check out repository
@@ -22,3 +22,18 @@ jobs:
 
     - name: Run tests with Maven
       run: mvn test
+
+  mail_on_failure:
+    - name: Send mail
+      if: failure()
+      uses: dawidd6/action-send-mail@v3
+      with:
+        connection_url: ${{secrets.MAIL_CONNECTION}}
+        # Required mail subject:
+        subject: ⚠️ Erro Pipeline Calculadora Web
+        # Required recipients' addresses:
+        to: Ben.FreitasG@gmail.com
+        # Required sender full name (address can be skipped):
+        from: Sistema Calculadora WEB # <user@example.com>
+        # Optional HTML body read from file:
+        html_body: file://email.html
