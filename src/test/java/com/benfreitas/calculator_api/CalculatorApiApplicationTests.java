@@ -21,4 +21,20 @@ class CalculatorApiApplicationTests {
 	void additionWithNegative() {
 		assertEquals(new BigDecimal(5), CalculatorService.add(new BigDecimal(7), new BigDecimal(-2)));
 	}
+	
+	@Test
+	void subtractTest() {
+		assertEquals(new BigDecimal(0), CalculatorService.subtract(new BigDecimal(2), new BigDecimal(2)));
+	}
+	
+	@Test
+	void multiplyTest() {
+		assertEquals(new BigDecimal(4), CalculatorService.multiply(new BigDecimal(2), new BigDecimal(2)));
+	}
+	
+	@Test
+	void divideTest() {
+		assertEquals(new BigDecimal(4), CalculatorService.divide(new BigDecimal(8), new BigDecimal(2)));
+	}
+	
 }
