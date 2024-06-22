@@ -31,7 +31,7 @@ jobs:
         # Required mail subject:
         subject: ⚠️ Erro Pipeline Calculadora Web
         # Required recipients' addresses:
-        to: Ben.FreitasG@gmail.com
+        to: Ben.FreitasG@gmail.com,RodrigoFreitas2121@gmail.com,glaubersfernandes@gmail.com,anderson.nascimento.info@gmail.com
         # Required sender full name (address can be skipped):
         from: Sistema Calculadora WEB # <user@example.com>
         # Optional HTML body read from file:
