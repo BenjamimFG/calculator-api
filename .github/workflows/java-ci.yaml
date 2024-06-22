@@ -24,6 +24,7 @@ jobs:
       run: mvn test
 
   mail_on_failure:
+    runs_on: linux
     steps:
     - name: Send mail
       if: failure()
