@@ -3,7 +3,7 @@ package com.benfreitas.calculator_api.models;
 import java.math.BigDecimal;
 
 public class CalculatorResult {
-    public BigDecimal result;
+    private BigDecimal result;
 
     public CalculatorResult(BigDecimal result) {
         this.result = result;
