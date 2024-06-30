@@ -1,12 +1,11 @@
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    tags:        
+      - '*' # Push events to every tag not containing /
 
 jobs:
   build_and_test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - name: Check out repository
       uses: actions/checkout@v2
@@ -22,6 +21,11 @@ jobs:
 
     - name: Run tests with Maven
       run: mvn test
+
+    - name: Start with docker compose
+      uses: hoverkraft-tech/compose-action@v2.0.1
+      env:
+        PORT: "80"
 
     - name: Send mail
       if: failure()

@@ -1,0 +1,6 @@
+services:
+  calculator-api:
+    build: .
+    ports:
+      - "${PORT}:8080"
+    restart: always
