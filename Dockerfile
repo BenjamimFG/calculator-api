@@ -2,10 +2,14 @@ FROM maven:3.9.7-sapmachine-21 AS build
 
 WORKDIR /web-calculator-api-build
 
+COPY pom.xml .
+
+RUN mvn dependency:resolve
+
 COPY . .
 
-RUN mvn compile
-RUN mvn clean package
+# Tests são realizados previamente no pipeline CI/CD
+RUN mvn -DskipTests clean package
 
 
 

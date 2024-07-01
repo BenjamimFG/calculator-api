@@ -1,6 +1,7 @@
 package com.benfreitas.calculator_api;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
 
 import java.math.BigDecimal;
 
@@ -35,6 +36,11 @@ class CalculatorApiApplicationTests {
 	@Test
 	void divideTest() {
 		assertEquals(new BigDecimal(4), CalculatorService.divide(new BigDecimal(8), new BigDecimal(2)));
+	}
+
+	@Test
+	void divideByZero() {
+		assertThrowsExactly(ArithmeticException.class, () -> CalculatorService.divide(new BigDecimal(5), new BigDecimal(0)));
 	}
 	
 }

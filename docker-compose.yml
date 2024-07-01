@@ -1,6 +1,6 @@
 services:
   calculator-api:
-    build: .
+    image: calculator-api
     ports:
       - "${PORT}:8080"
     restart: always
