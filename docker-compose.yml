@@ -2,5 +2,5 @@ services:
   calculator-api:
     image: calculator-api
     ports:
-      - "${PORT}:8080"
+      - "8080:8080"
     restart: always
