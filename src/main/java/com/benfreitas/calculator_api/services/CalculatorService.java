@@ -18,4 +18,10 @@ public class CalculatorService {
     public static BigDecimal divide(BigDecimal a, BigDecimal b) throws ArithmeticException {  
         return a.divide(b);
     }
+
+    public static double pow(Double a, Double b) throws ArithmeticException {  
+        return Math.pow(a.doubleValue(), b.doubleValue());
+    }
+
+
 }

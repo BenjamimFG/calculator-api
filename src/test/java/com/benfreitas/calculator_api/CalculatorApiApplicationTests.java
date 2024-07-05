@@ -42,5 +42,10 @@ class CalculatorApiApplicationTests {
 	void divideByZero() {
 		assertThrowsExactly(ArithmeticException.class, () -> CalculatorService.divide(new BigDecimal(5), new BigDecimal(0)));
 	}
+
+	@Test
+	void powTest(){
+		assertEquals(4, CalculatorService.pow(2.0,2.0));
+	}
 	
 }
