@@ -1,6 +1,7 @@
 package com.benfreitas.calculator_api.services;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class CalculatorService {
     public static BigDecimal add(BigDecimal a, BigDecimal b) {
@@ -16,7 +17,7 @@ public class CalculatorService {
     }
 
     public static BigDecimal divide(BigDecimal a, BigDecimal b) throws ArithmeticException {  
-        return a.divide(b);
+        return a.divide(b, 3, RoundingMode.HALF_UP);
     }
 
     public static double pow(Double a, Double b) throws ArithmeticException {  
