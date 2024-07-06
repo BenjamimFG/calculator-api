@@ -29,8 +29,11 @@ jobs:
     - name: Start with docker compose
       run: docker compose up -d --force-recreate
 
+  email_on_failure:
+    runs-on: ubuntu-latest
+    if: failure()
+    steps:
     - name: Send email on failure
-      if: failure()
       uses: dawidd6/action-send-mail@v3
       with:
         connection_url: ${{secrets.MAIL_CONNECTION}}
