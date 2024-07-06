@@ -26,9 +26,16 @@ services:
       - "4000:3000"
     volumes:
       - ./docker/grafana/grafana.ini:/etc/grafana/grafana.ini
+      - ./docker/grafana/datasources/:/etc/grafana/provisioning/datasources/
+      - ./docker/grafana/dashboards/:/etc/grafana/provisioning/dashboards/
+      - ./docker/grafana/spring_dashboard.json:/var/lib/grafana/dashboards/spring_dashboard.json
+      - grafana-data:/var/lib/grafana
     networks:
         - calculator-api-network
     restart: always
 
 networks:
   calculator-api-network:
+
+volumes:
+  grafana-data:

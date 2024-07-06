@@ -27,7 +27,7 @@ jobs:
       run: docker build --tag calculator-api .
 
     - name: Start with docker compose
-      run: docker compose up -d
+      run: docker compose up -d --force-recreate
 
     - name: Send email on failure
       if: failure()

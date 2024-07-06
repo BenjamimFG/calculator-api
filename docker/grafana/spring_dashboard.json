@@ -3,10 +3,7 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": {
-          "type": "datasource",
-          "uid": "grafana"
-        },
+        "datasource": "Prometheus",
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -24,10 +21,7 @@
   "links": [],
   "panels": [
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -77,10 +71,7 @@
       "pluginVersion": "11.1.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "disableTextWrap": false,
           "editorMode": "builder",
           "expr": "add_requests_total",
@@ -97,10 +88,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -150,10 +138,7 @@
       "pluginVersion": "11.1.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "disableTextWrap": false,
           "editorMode": "builder",
           "expr": "sub_requests_total",
@@ -170,10 +155,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -223,10 +205,7 @@
       "pluginVersion": "11.1.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "disableTextWrap": false,
           "editorMode": "builder",
           "expr": "mul_requests_total",
@@ -243,10 +222,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -296,10 +272,7 @@
       "pluginVersion": "11.1.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "disableTextWrap": false,
           "editorMode": "builder",
           "expr": "div_requests_total",
@@ -317,10 +290,7 @@
     },
     {
       "collapsed": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -331,10 +301,7 @@
       "panels": [],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "refId": "A"
         }
       ],
@@ -342,10 +309,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "mappings": [
@@ -404,10 +368,7 @@
       "pluginVersion": "11.1.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "expr": "process_start_time_seconds{application=\"$application\", instance=\"$instance\"}*1000",
           "format": "time_series",
           "intervalFactor": 2,
@@ -421,10 +382,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "decimals": 1,
@@ -490,10 +448,7 @@
       "pluginVersion": "11.1.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "expr": "sum(jvm_memory_used_bytes{application=\"$application\", instance=\"$instance\", area=\"heap\"})*100/sum(jvm_memory_max_bytes{application=\"$application\",instance=\"$instance\", area=\"heap\"})",
           "format": "time_series",
           "intervalFactor": 1,
@@ -506,10 +461,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "decimals": 1,
@@ -585,10 +537,7 @@
       "pluginVersion": "11.1.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "expr": "sum(jvm_memory_used_bytes{application=\"$application\", instance=\"$instance\", area=\"nonheap\"})*100/sum(jvm_memory_max_bytes{application=\"$application\",instance=\"$instance\", area=\"nonheap\"})",
           "format": "time_series",
           "intervalFactor": 2,
@@ -601,10 +550,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "decimals": 1,
@@ -664,10 +610,7 @@
       "pluginVersion": "11.1.0",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "expr": "process_uptime_seconds{application=\"$application\", instance=\"$instance\"}",
           "format": "time_series",
           "intervalFactor": 2,
@@ -681,10 +624,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -768,10 +708,7 @@
       "pluginVersion": "7.3.5",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "expr": "system_cpu_usage{instance=\"$instance\", application=\"$application\"}",
           "format": "time_series",
           "intervalFactor": 1,
@@ -779,10 +716,7 @@
           "refId": "A"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "expr": "process_cpu_usage{instance=\"$instance\", application=\"$application\"}",
           "format": "time_series",
           "intervalFactor": 1,
@@ -794,10 +728,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -881,10 +812,7 @@
       "pluginVersion": "7.3.5",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "expr": "system_load_average_1m{instance=\"$instance\", application=\"$application\"}",
           "format": "time_series",
           "intervalFactor": 1,
@@ -892,10 +820,7 @@
           "refId": "A"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "expr": "system_cpu_count{instance=\"$instance\", application=\"$application\"}",
           "format": "time_series",
           "intervalFactor": 1,
@@ -907,10 +832,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -989,10 +911,7 @@
       "pluginVersion": "7.3.5",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "expr": "http_server_requests_seconds_sum{instance=\"$instance\", application=\"$application\"}",
           "format": "time_series",
           "interval": "",
@@ -1005,10 +924,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1087,10 +1003,7 @@
       "pluginVersion": "7.3.5",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "expr": "http_server_requests_seconds_count{instance=\"$instance\", application=\"$application\"}",
           "format": "time_series",
           "interval": "",
@@ -1103,10 +1016,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1185,10 +1095,7 @@
       "pluginVersion": "7.3.5",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "expr": "http_server_requests_seconds_max{instance=\"$instance\", application=\"$application\"}",
           "format": "time_series",
           "interval": "",
@@ -1202,10 +1109,7 @@
     },
     {
       "collapsed": true,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -1219,10 +1123,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -1268,10 +1169,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_memory_used_bytes{instance=\"$instance\", application=\"$application\", id=\"$memory_pool_heap\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1279,10 +1177,7 @@
               "refId": "C"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_memory_committed_bytes{instance=\"$instance\", application=\"$application\", id=\"$memory_pool_heap\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1290,10 +1185,7 @@
               "refId": "A"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_memory_max_bytes{instance=\"$instance\", application=\"$application\", id=\"$memory_pool_heap\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1336,10 +1228,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -1385,10 +1274,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_memory_used_bytes{instance=\"$instance\", application=\"$application\", id=\"$memory_pool_nonheap\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1396,10 +1282,7 @@
               "refId": "C"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_memory_committed_bytes{instance=\"$instance\", application=\"$application\", id=\"$memory_pool_nonheap\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1407,10 +1290,7 @@
               "refId": "A"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_memory_max_bytes{instance=\"$instance\", application=\"$application\", id=\"$memory_pool_nonheap\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1453,10 +1333,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "decimals": 0,
           "fieldConfig": {
             "defaults": {
@@ -1501,10 +1378,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_classes_loaded{instance=\"$instance\", application=\"$application\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1549,10 +1423,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -1595,10 +1466,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "irate(jvm_classes_unloaded_total{instance=\"$instance\", application=\"$application\"}[5m])",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1641,10 +1509,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -1687,10 +1552,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_buffer_memory_used_bytes{instance=\"$instance\", application=\"$application\", id=\"direct\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1698,10 +1560,7 @@
               "refId": "A"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_buffer_total_capacity_bytes{instance=\"$instance\", application=\"$application\", id=\"direct\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1744,10 +1603,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -1790,10 +1646,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_buffer_memory_used_bytes{instance=\"$instance\", application=\"$application\", id=\"mapped\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1801,10 +1654,7 @@
               "refId": "A"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_buffer_total_capacity_bytes{instance=\"$instance\", application=\"$application\", id=\"mapped\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1847,10 +1697,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -1894,10 +1741,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_threads_daemon{instance=\"$instance\", application=\"$application\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1905,10 +1749,7 @@
               "refId": "A"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_threads_live{instance=\"$instance\", application=\"$application\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1916,10 +1757,7 @@
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jvm_threads_peak{instance=\"$instance\", application=\"$application\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -1962,10 +1800,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -2008,10 +1843,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "irate(jvm_gc_memory_allocated_bytes_total{instance=\"$instance\", application=\"$application\"}[5m])",
               "format": "time_series",
               "intervalFactor": 1,
@@ -2019,10 +1851,7 @@
               "refId": "A"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "irate(jvm_gc_memory_promoted_bytes_total{instance=\"$instance\", application=\"$application\"}[5m])",
               "format": "time_series",
               "intervalFactor": 1,
@@ -2063,10 +1892,7 @@
       ],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "refId": "A"
         }
       ],
@@ -2075,10 +1901,7 @@
     },
     {
       "collapsed": true,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2092,10 +1915,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -2141,10 +1961,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "irate(jvm_gc_pause_seconds_count{instance=\"$instance\", application=\"$application\"}[5m])",
               "format": "time_series",
               "intervalFactor": 1,
@@ -2187,10 +2004,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -2236,10 +2050,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "irate(jvm_gc_pause_seconds_sum{instance=\"$instance\", application=\"$application\"}[5m])",
               "format": "time_series",
               "intervalFactor": 1,
@@ -2280,10 +2091,7 @@
       ],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "refId": "A"
         }
       ],
@@ -2292,10 +2100,7 @@
     },
     {
       "collapsed": true,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2313,10 +2118,7 @@
             "rgba(237, 129, 40, 0.89)",
             "#d44a3a"
           ],
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2404,10 +2206,7 @@
           "tableColumn": "hikaricp_connections{app=\"orders\", app_kubernetes_io_instance=\"mushop\", app_kubernetes_io_name=\"orders\", instance=\"10.1.0.72:80\", job=\"kubernetes-pods\", kubernetes_namespace=\"mushop\", kubernetes_pod_name=\"mushop-orders-67bb8f45c8-5cr5p\", mockmode=\"false\", pod_template_hash=\"67bb8f45c8\", pool=\"HikariPool-1\", version=\"local\"}",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "hikaricp_connections{instance=\"$instance\", application=\"$application\", pool=\"$hikaricp\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -2433,10 +2232,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -2482,10 +2278,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "hikaricp_connections_active{instance=\"$instance\", application=\"$application\", pool=\"$hikaricp\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -2493,10 +2286,7 @@
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "hikaricp_connections_idle{instance=\"$instance\", application=\"$application\", pool=\"$hikaricp\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -2504,10 +2294,7 @@
               "refId": "A"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "hikaricp_connections_pending{instance=\"$instance\", application=\"$application\", pool=\"$hikaricp\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -2554,10 +2341,7 @@
             "rgba(237, 129, 40, 0.89)",
             "#d44a3a"
           ],
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -2645,10 +2429,7 @@
           "tableColumn": "hikaricp_connections_timeout_total{app=\"orders\", app_kubernetes_io_instance=\"mushop\", app_kubernetes_io_name=\"orders\", instance=\"10.1.0.72:80\", job=\"kubernetes-pods\", kubernetes_namespace=\"mushop\", kubernetes_pod_name=\"mushop-orders-67bb8f45c8-5cr5p\", mockmode=\"false\", pod_template_hash=\"67bb8f45c8\", pool=\"HikariPool-1\", version=\"local\"}",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "hikaricp_connections_timeout_total{instance=\"$instance\", application=\"$application\", pool=\"$hikaricp\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -2674,10 +2455,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -2720,10 +2498,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "hikaricp_connections_creation_seconds_sum{instance=\"$instance\", application=\"$application\", pool=\"$hikaricp\"} / hikaricp_connections_creation_seconds_count{instance=\"$instance\", application=\"$application\", pool=\"$hikaricp\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -2766,10 +2541,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -2812,10 +2584,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "hikaricp_connections_usage_seconds_sum{instance=\"$instance\", application=\"$application\", pool=\"$hikaricp\"} / hikaricp_connections_usage_seconds_count{instance=\"$instance\", application=\"$application\", pool=\"$hikaricp\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -2858,10 +2627,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -2904,10 +2670,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "hikaricp_connections_acquire_seconds_sum{instance=\"$instance\", application=\"$application\", pool=\"$hikaricp\"} / hikaricp_connections_acquire_seconds_count{instance=\"$instance\", application=\"$application\", pool=\"$hikaricp\"}",
               "format": "time_series",
               "intervalFactor": 1,
@@ -2948,10 +2711,7 @@
       ],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "refId": "A"
         }
       ],
@@ -2960,10 +2720,7 @@
     },
     {
       "collapsed": true,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2973,10 +2730,7 @@
       "id": 101,
       "panels": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -3041,10 +2795,7 @@
           "pluginVersion": "7.3.5",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "hibernate_transactions_total{application=\"$application\", instance=\"$instance\", result=\"success\"}",
               "format": "time_series",
               "interval": "",
@@ -3059,10 +2810,7 @@
           "type": "stat"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -3127,10 +2875,7 @@
           "pluginVersion": "7.3.5",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "hibernate_statements_total{application=\"$application\", instance=\"$instance\", status=\"prepared\"}",
               "format": "time_series",
               "interval": "",
@@ -3145,10 +2890,7 @@
           "type": "stat"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -3213,10 +2955,7 @@
           "pluginVersion": "7.3.5",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "hibernate_optimistic_failures_total",
               "format": "time_series",
               "interval": "",
@@ -3231,10 +2970,7 @@
           "type": "stat"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -3299,10 +3035,7 @@
           "pluginVersion": "7.3.5",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "hibernate_query_executions_total",
               "format": "time_series",
               "interval": "",
@@ -3321,10 +3054,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {},
@@ -3368,10 +3098,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_sessions_open_total{application=\"$application\", instance=\"$instance\"}[5m])  ",
               "hide": false,
               "interval": "",
@@ -3379,10 +3106,7 @@
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_sessions_closed_total{application=\"$application\", instance=\"$instance\"}[5m])  ",
               "hide": false,
               "interval": "",
@@ -3390,10 +3114,7 @@
               "refId": "C"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_flushes_total{application=\"$application\", instance=\"$instance\"}[5m])  ",
               "interval": "",
               "legendFormat": "flushes",
@@ -3447,10 +3168,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {},
@@ -3508,10 +3226,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_collections_loads_total{application=\"$application\", instance=\"$instance\"}[2m])",
               "format": "time_series",
               "hide": false,
@@ -3521,10 +3236,7 @@
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_collections_updates_total{application=\"$application\", instance=\"$instance\"}[2m])",
               "hide": false,
               "instant": false,
@@ -3533,10 +3245,7 @@
               "refId": "C"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_collections_fetches_total{application=\"$application\", instance=\"$instance\"}[2m])",
               "hide": false,
               "instant": false,
@@ -3545,20 +3254,14 @@
               "refId": "A"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_collections_deletes_total{application=\"$application\", instance=\"$instance\"}[2m])",
               "interval": "",
               "legendFormat": "remove",
               "refId": "D"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_collections_recreates_total{application=\"$application\", instance=\"$instance\"}[2m])",
               "interval": "",
               "legendFormat": "recreates",
@@ -3602,10 +3305,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {},
@@ -3663,10 +3363,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_collections_loads_total{application=\"$application\", instance=\"$instance\"}[2m])",
               "format": "time_series",
               "hide": false,
@@ -3676,10 +3373,7 @@
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_entities_updates_total{application=\"$application\", instance=\"$instance\"}[2m])",
               "hide": false,
               "instant": false,
@@ -3688,10 +3382,7 @@
               "refId": "C"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_entities_fetches_total{application=\"$application\", instance=\"$instance\"}[2m])",
               "hide": false,
               "instant": false,
@@ -3700,30 +3391,21 @@
               "refId": "A"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_entities_deletes_total{application=\"$application\", instance=\"$instance\"}[2m])",
               "interval": "",
               "legendFormat": "entities removed",
               "refId": "D"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_entities_recreates_total{application=\"$application\", instance=\"$instance\"}[2m])",
               "interval": "",
               "legendFormat": "recreates",
               "refId": "E"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "rate(hibernate_entities_inserts_total{application=\"$application\", instance=\"$instance\"}[2m])",
               "interval": "",
               "legendFormat": "entities inserted",
@@ -3765,10 +3447,7 @@
       ],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "refId": "A"
         }
       ],
@@ -3777,10 +3456,7 @@
     },
     {
       "collapsed": true,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -3794,10 +3470,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {},
@@ -3844,10 +3517,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "irate(http_server_requests_seconds_count{instance=\"$instance\", application=\"$application\", uri!~\".*actuator.*\"}[5m])",
               "format": "time_series",
               "interval": "",
@@ -3891,10 +3561,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {},
@@ -3941,10 +3608,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "irate(http_server_requests_seconds_sum{instance=\"$instance\", application=\"$application\", exception=\"None\", uri!~\".*actuator.*\"}[5m]) / irate(http_server_requests_seconds_count{instance=\"$instance\", application=\"$application\", exception=\"None\", uri!~\".*actuator.*\"}[5m])",
               "format": "time_series",
               "intervalFactor": 1,
@@ -3986,10 +3650,7 @@
       ],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "refId": "A"
         }
       ],
@@ -3998,10 +3659,7 @@
     },
     {
       "collapsed": true,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -4019,10 +3677,7 @@
             "rgba(237, 129, 40, 0.89)",
             "#d44a3a"
           ],
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -4110,10 +3765,7 @@
           "tableColumn": "jetty_threads_config_max{app=\"orders\", app_kubernetes_io_instance=\"mushop\", app_kubernetes_io_name=\"orders\", instance=\"10.1.0.72:80\", job=\"kubernetes-pods\", kubernetes_namespace=\"mushop\", kubernetes_pod_name=\"mushop-orders-67bb8f45c8-5cr5p\", mockmode=\"false\", pod_template_hash=\"67bb8f45c8\", version=\"local\"}",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jetty_threads_config_max{instance=\"$instance\", application=\"$application\"}  ",
               "format": "time_series",
               "interval": "",
@@ -4140,10 +3792,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "decimals": 0,
           "fieldConfig": {
             "defaults": {
@@ -4189,10 +3838,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jetty_threads_busy{instance=\"$instance\", application=\"$application\"}",
               "format": "time_series",
               "interval": "",
@@ -4201,30 +3847,21 @@
               "refId": "A"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jetty_threads_idle{instance=\"$instance\", application=\"$application\"}",
               "interval": "",
               "legendFormat": "idle",
               "refId": "B"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jetty_threads_current{instance=\"$instance\", application=\"$application\"}",
               "interval": "",
               "legendFormat": "current",
               "refId": "C"
             },
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jetty_threads_jobs{instance=\"$instance\", application=\"$application\"}",
               "interval": "",
               "legendFormat": "jobs",
@@ -4271,10 +3908,7 @@
             "rgba(237, 129, 40, 0.89)",
             "#d44a3a"
           ],
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "color": {
@@ -4362,10 +3996,7 @@
           "tableColumn": "jetty_threads_config_min{app=\"orders\", app_kubernetes_io_instance=\"mushop\", app_kubernetes_io_name=\"orders\", instance=\"10.1.0.72:80\", job=\"kubernetes-pods\", kubernetes_namespace=\"mushop\", kubernetes_pod_name=\"mushop-orders-67bb8f45c8-5cr5p\", mockmode=\"false\", pod_template_hash=\"67bb8f45c8\", version=\"local\"}",
           "targets": [
             {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "jetty_threads_config_min{instance=\"$instance\", application=\"$application\"}",
               "format": "time_series",
               "interval": "",
@@ -4390,10 +4021,7 @@
       ],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "refId": "A"
         }
       ],
@@ -4402,10 +4030,7 @@
     },
     {
       "collapsed": true,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "ddqvw041ffchsc"
-      },
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -4419,10 +4044,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -4467,10 +4089,7 @@
           "targets": [
             {
               "alias": "",
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "irate(logback_events_total{instance=\"$instance\", application=\"$application\", level=\"info\"}[5m])",
               "format": "time_series",
               "intervalFactor": 1,
@@ -4514,10 +4133,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -4562,10 +4178,7 @@
           "targets": [
             {
               "alias": "",
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "irate(logback_events_total{instance=\"$instance\", application=\"$application\", level=\"error\"}[5m])",
               "format": "time_series",
               "intervalFactor": 1,
@@ -4609,10 +4222,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -4657,10 +4267,7 @@
           "targets": [
             {
               "alias": "",
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "irate(logback_events_total{instance=\"$instance\", application=\"$application\", level=\"warn\"}[5m])",
               "format": "time_series",
               "intervalFactor": 1,
@@ -4704,10 +4311,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -4752,10 +4356,7 @@
           "targets": [
             {
               "alias": "",
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "irate(logback_events_total{instance=\"$instance\", application=\"$application\", level=\"debug\"}[5m])",
               "format": "time_series",
               "intervalFactor": 1,
@@ -4799,10 +4400,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "fieldConfig": {
             "defaults": {
               "custom": {}
@@ -4847,10 +4445,7 @@
           "targets": [
             {
               "alias": "",
-              "datasource": {
-                "type": "prometheus",
-                "uid": "ddqvw041ffchsc"
-              },
+              "datasource": "Prometheus",
               "expr": "irate(logback_events_total{instance=\"$instance\", application=\"$application\", level=\"trace\"}[5m])",
               "format": "time_series",
               "intervalFactor": 1,
@@ -4892,10 +4487,7 @@
       ],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "ddqvw041ffchsc"
-          },
+          "datasource": "Prometheus",
           "refId": "A"
         }
       ],
@@ -4914,10 +4506,7 @@
           "text": "calculator-api:8080",
           "value": "calculator-api:8080"
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "ddqvw041ffchsc"
-        },
+        "datasource": "Prometheus",
         "definition": "label_values(jvm_classes_loaded_classes, instance)",
         "hide": 0,
         "includeAll": false,
@@ -4942,10 +4531,7 @@
           "text": "None",
           "value": ""
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "ddqvw041ffchsc"
-        },
+        "datasource": "Prometheus",
         "definition": "",
         "hide": 0,
         "includeAll": false,
@@ -4970,10 +4556,7 @@
           "text": "None",
           "value": ""
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "ddqvw041ffchsc"
-        },
+        "datasource": "Prometheus",
         "definition": "",
         "hide": 0,
         "includeAll": false,
@@ -4997,10 +4580,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "ddqvw041ffchsc"
-        },
+        "datasource": "Prometheus",
         "definition": "",
         "hide": 0,
         "includeAll": true,
@@ -5024,10 +4604,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": {
-          "type": "prometheus",
-          "uid": "ddqvw041ffchsc"
-        },
+        "datasource": "Prometheus",
         "definition": "",
         "hide": 0,
         "includeAll": true,
