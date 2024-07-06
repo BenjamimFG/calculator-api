@@ -23,7 +23,7 @@ services:
     container_name: calculator-api-grafana
     image: grafana/grafana
     ports:
-      - "4000:3000"
+      - "3000:3000"
     volumes:
       - ./docker/grafana/grafana.ini:/etc/grafana/grafana.ini
       - ./docker/grafana/datasources/:/etc/grafana/provisioning/datasources/

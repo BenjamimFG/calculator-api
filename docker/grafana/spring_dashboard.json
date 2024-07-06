@@ -17,7 +17,6 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 14430,
   "graphTooltip": 0,
-  "id": 1,
   "links": [],
   "panels": [
     {
@@ -4495,7 +4494,7 @@
       "type": "row"
     }
   ],
-  "refresh": "",
+  "refresh": "10s",
   "schemaVersion": 39,
   "tags": [],
   "templating": {
@@ -4506,7 +4505,10 @@
           "text": "calculator-api:8080",
           "value": "calculator-api:8080"
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
         "definition": "label_values(jvm_classes_loaded_classes, instance)",
         "hide": 0,
         "includeAll": false,
@@ -4531,7 +4533,10 @@
           "text": "None",
           "value": ""
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
         "definition": "",
         "hide": 0,
         "includeAll": false,
@@ -4556,7 +4561,10 @@
           "text": "None",
           "value": ""
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
         "definition": "",
         "hide": 0,
         "includeAll": false,
@@ -4580,7 +4588,10 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
         "definition": "",
         "hide": 0,
         "includeAll": true,
@@ -4604,7 +4615,10 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "Prometheus",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
+        },
         "definition": "",
         "hide": 0,
         "includeAll": true,
@@ -4655,6 +4669,6 @@
   "timezone": "",
   "title": "Spring Boot Statistics & Endpoint Metrics",
   "uid": "OS7-NUiGz",
-  "version": 4,
+  "version": 1,
   "weekStart": ""
 }
