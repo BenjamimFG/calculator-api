@@ -31,7 +31,7 @@ jobs:
 
   email_on_failure:
     runs-on: ubuntu-latest
-    if: ${{ contains(join(needs.*.result, ','), 'failure') }}
+    if: ${{ always() && contains(join(needs.*.result, ','), 'failure') }}
     needs: [build_and_test]
     steps:
     - name: Send email on failure
