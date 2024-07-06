@@ -35,6 +35,9 @@ jobs:
     - name: Start with docker compose
       run: docker compose up -d
 
+    - name: Print JaCoCo Badge URL
+      run: echo "JaCoCo Badge URL: ${{ steps.jacoco.outputs.badge-url }}"
+
     - name: Send email on failure
       if: failure()
       uses: dawidd6/action-send-mail@v3
