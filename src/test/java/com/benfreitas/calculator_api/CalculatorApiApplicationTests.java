@@ -35,7 +35,7 @@ class CalculatorApiApplicationTests {
 	
 	@Test
 	void divideTest() {
-		assertEquals(new BigDecimal(4), CalculatorService.divide(new BigDecimal(8), new BigDecimal(2)));
+		assertEquals(new BigDecimal("4.000"), CalculatorService.divide(new BigDecimal(8), new BigDecimal(2)));
 	}
 
 	@Test
