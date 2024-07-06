@@ -27,10 +27,17 @@ jobs:
       run: docker build --tag calculator-api .
 
     - name: Start with docker compose
-      run: docker compose up -d
+      run: docker compose up -d --force-recreate
+
+  email_on_failure:
+    runs-on: ubuntu-latest
+    if: ${{ always() && contains(join(needs.*.result, ','), 'failure') }}
+    needs: [build_and_test]
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
 
     - name: Send email on failure
-      if: failure()
       uses: dawidd6/action-send-mail@v3
       with:
         connection_url: ${{secrets.MAIL_CONNECTION}}

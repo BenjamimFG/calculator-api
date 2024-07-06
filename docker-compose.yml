@@ -1,6 +1,41 @@
 services:
   calculator-api:
+    container_name: calculator-api
     image: calculator-api
     ports:
       - "8080:8080"
     restart: always
+    networks:
+        - calculator-api-network
+  
+  prometheus:
+    container_name: calculator-api-prometheus
+    image: prom/prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+      - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    restart: always
+    networks:
+        - calculator-api-network
+
+  grafana:
+    container_name: calculator-api-grafana
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./docker/grafana/grafana.ini:/etc/grafana/grafana.ini
+      - ./docker/grafana/datasources/:/etc/grafana/provisioning/datasources/
+      - ./docker/grafana/dashboards/:/etc/grafana/provisioning/dashboards/
+      - ./docker/grafana/spring_dashboard.json:/var/lib/grafana/dashboards/spring_dashboard.json
+      - grafana-data:/var/lib/grafana
+    networks:
+        - calculator-api-network
+    restart: always
+
+networks:
+  calculator-api-network:
+
+volumes:
+  grafana-data:
