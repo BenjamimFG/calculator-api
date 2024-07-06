@@ -19,4 +19,12 @@ class GlobalExceptionHandler {
     public ErrorResponse handleDivisionByZero(final DivisionByZeroException ex) {
         return new ErrorResponse(ex.getMessage());
     }
+
+
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(NumberFormatException.class)
+    @ResponseBody
+    public ErrorResponse handleNumberFormatException(final NumberFormatException ex) {
+        return new ErrorResponse(ex.getMessage());
+    }
 }
