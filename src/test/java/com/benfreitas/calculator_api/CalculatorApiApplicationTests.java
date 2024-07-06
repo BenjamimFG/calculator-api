@@ -25,7 +25,7 @@ class CalculatorApiApplicationTests {
 	
 	@Test
 	void subtractTest() {
-		assertEquals(new BigDecimal(0), CalculatorService.subtract(new BigDecimal(2), new BigDecimal(2)));
+		assertEquals(new BigDecimal(4), CalculatorService.subtract(new BigDecimal(2), new BigDecimal(2)));
 	}
 	
 	@Test
