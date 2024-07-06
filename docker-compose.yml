@@ -6,7 +6,7 @@ services:
       - "8080:8080"
     restart: always
     networks:
-      - calculator-api-network
+        - calculator-api-network
   
   prometheus:
     container_name: calculator-api-prometheus
@@ -19,15 +19,16 @@ services:
       - ./docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     restart: always
     networks:
-      - calculator-api-network
+        - calculator-api-network
 
   grafana:
     container_name: calculator-api-grafana
     image: grafana/grafana
     ports:
-      - "3000:3000"
+      - "4000:3000"
     networks:
-      - calculator-api-network
+        - calculator-api-network
+    restart: always
 
 networks:
   calculator-api-network:
