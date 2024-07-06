@@ -23,20 +23,11 @@ jobs:
     - name: Generate JaCoCo report
       run: mvn jacoco:report
 
-    - name: Generate JaCoCo Badge
-      id: jacoco
-      uses: cicirello/jacoco-badge-generator@v2
-      with:
-        jacoco-csv-file: target/site/jacoco/jacoco.csv
-
     - name: Create docker image
       run: docker build --tag calculator-api .
 
     - name: Start with docker compose
       run: docker compose up -d
-
-    - name: Print JaCoCo Badge URL
-      run: echo "JaCoCo Badge URL: ${{ steps.jacoco.outputs.badge-url }}"
 
     - name: Send email on failure
       if: failure()
